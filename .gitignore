@@ -1,5 +1,9 @@
 weights
-data
+data/*
+!data/coco.py
+!data/config.py
+!data/__init__.py
+!data/scripts
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
