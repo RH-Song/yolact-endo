@@ -1,0 +1,660 @@
+weights/aug_yolactpp_longerer/yolact_plus_base_102_70000.pth
+Config not specified. Parsed yolact_plus_base_config from the file name.
+
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+coco detection……
+dataset 
+526
+Loading model... Done.
+
+
+Saving data...
+Calculating mAP...
+
+       |  all  |  .50  |  .55  |  .60  |  .65  |  .70  |  .75  |  .80  |  .85  |  .90  |  .95  |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+   box | 59.40 | 86.10 | 85.10 | 83.83 | 81.03 | 75.59 | 66.40 | 53.89 | 38.92 | 19.70 |  3.49 |
+  mask | 68.02 | 85.95 | 84.95 | 83.46 | 80.50 | 78.08 | 75.46 | 70.64 | 63.09 | 46.90 | 11.22 |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+
+weights/aug_yolactpp_longerer/yolact_plus_base_116_80000.pth
+Config not specified. Parsed yolact_plus_base_config from the file name.
+
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+coco detection……
+dataset 
+526
+Loading model... Done.
+
+
+Saving data...
+Calculating mAP...
+
+       |  all  |  .50  |  .55  |  .60  |  .65  |  .70  |  .75  |  .80  |  .85  |  .90  |  .95  |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+   box | 58.66 | 85.82 | 84.74 | 82.43 | 79.59 | 74.86 | 65.78 | 55.48 | 37.73 | 17.69 |  2.53 |
+  mask | 67.40 | 85.01 | 84.84 | 83.36 | 80.91 | 78.40 | 73.98 | 70.24 | 60.78 | 46.30 | 10.14 |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+
+weights/aug_yolactpp_longerer/yolact_plus_base_131_90000.pth
+Config not specified. Parsed yolact_plus_base_config from the file name.
+
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+coco detection……
+dataset 
+526
+Loading model... Done.
+
+
+Saving data...
+Calculating mAP...
+
+       |  all  |  .50  |  .55  |  .60  |  .65  |  .70  |  .75  |  .80  |  .85  |  .90  |  .95  |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+   box | 62.31 | 87.53 | 86.40 | 85.20 | 82.88 | 77.76 | 71.62 | 61.90 | 43.79 | 23.66 |  2.31 |
+  mask | 71.09 | 86.39 | 86.08 | 84.02 | 82.57 | 81.44 | 78.67 | 74.92 | 68.47 | 53.96 | 14.39 |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+
+weights/aug_yolactpp_longerer/yolact_plus_base_14_10000.pth
+Config not specified. Parsed yolact_plus_base_config from the file name.
+
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+coco detection……
+dataset 
+526
+Loading model... Done.
+
+
+Saving data...
+Calculating mAP...
+
+       |  all  |  .50  |  .55  |  .60  |  .65  |  .70  |  .75  |  .80  |  .85  |  .90  |  .95  |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+   box | 56.53 | 85.46 | 83.82 | 81.41 | 77.83 | 72.45 | 65.78 | 52.76 | 32.39 | 12.34 |  1.01 |
+  mask | 64.48 | 84.38 | 83.07 | 80.62 | 78.63 | 76.28 | 73.48 | 67.48 | 56.11 | 40.36 |  4.40 |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+
+weights/aug_yolactpp_longerer/yolact_plus_base_146_100000.pth
+Config not specified. Parsed yolact_plus_base_config from the file name.
+
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+coco detection……
+dataset 
+526
+Loading model... Done.
+
+
+Saving data...
+Calculating mAP...
+
+       |  all  |  .50  |  .55  |  .60  |  .65  |  .70  |  .75  |  .80  |  .85  |  .90  |  .95  |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+   box | 61.00 | 87.05 | 85.72 | 83.29 | 80.59 | 75.72 | 70.59 | 58.60 | 44.07 | 22.05 |  2.27 |
+  mask | 71.16 | 87.28 | 86.11 | 85.04 | 83.72 | 81.39 | 78.67 | 74.95 | 67.69 | 53.32 | 13.39 |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+
+weights/aug_yolactpp_longerer/yolact_plus_base_160_110000.pth
+Config not specified. Parsed yolact_plus_base_config from the file name.
+
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+coco detection……
+dataset 
+526
+Loading model... Done.
+
+
+Saving data...
+Calculating mAP...
+
+       |  all  |  .50  |  .55  |  .60  |  .65  |  .70  |  .75  |  .80  |  .85  |  .90  |  .95  |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+   box | 62.86 | 88.49 | 87.15 | 85.94 | 83.40 | 79.40 | 72.40 | 62.76 | 41.69 | 22.60 |  4.76 |
+  mask | 72.49 | 87.21 | 87.05 | 85.71 | 84.69 | 82.98 | 78.92 | 75.51 | 70.45 | 56.44 | 15.97 |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+
+weights/aug_yolactpp_longerer/yolact_plus_base_175_120000.pth
+Config not specified. Parsed yolact_plus_base_config from the file name.
+
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+coco detection……
+dataset 
+526
+Loading model... Done.
+
+
+Saving data...
+Calculating mAP...
+
+       |  all  |  .50  |  .55  |  .60  |  .65  |  .70  |  .75  |  .80  |  .85  |  .90  |  .95  |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+   box | 62.55 | 88.43 | 87.29 | 85.78 | 83.07 | 78.80 | 72.23 | 60.23 | 43.34 | 22.16 |  4.14 |
+  mask | 72.84 | 87.25 | 87.01 | 85.75 | 84.58 | 83.17 | 80.31 | 76.67 | 70.88 | 57.66 | 15.12 |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+
+weights/aug_yolactpp_longerer/yolact_plus_base_190_130000.pth
+Config not specified. Parsed yolact_plus_base_config from the file name.
+
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+coco detection……
+dataset 
+526
+Loading model... Done.
+
+
+Saving data...
+Calculating mAP...
+
+       |  all  |  .50  |  .55  |  .60  |  .65  |  .70  |  .75  |  .80  |  .85  |  .90  |  .95  |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+   box | 60.99 | 87.34 | 86.13 | 84.46 | 81.63 | 76.01 | 68.67 | 56.70 | 41.07 | 22.86 |  4.97 |
+  mask | 72.12 | 87.36 | 86.20 | 84.83 | 83.65 | 81.98 | 78.08 | 75.87 | 71.14 | 56.99 | 15.13 |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+
+weights/aug_yolactpp_longerer/yolact_plus_base_204_140000.pth
+Config not specified. Parsed yolact_plus_base_config from the file name.
+
+loading annotations into memory...
+Done (t=0.02s)
+creating index...
+index created!
+coco detection……
+dataset 
+526
+Loading model... Done.
+
+
+Saving data...
+Calculating mAP...
+
+       |  all  |  .50  |  .55  |  .60  |  .65  |  .70  |  .75  |  .80  |  .85  |  .90  |  .95  |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+   box | 62.96 | 88.53 | 87.47 | 86.08 | 83.38 | 79.27 | 71.72 | 59.89 | 44.08 | 24.12 |  5.04 |
+  mask | 73.15 | 88.24 | 87.07 | 85.79 | 85.62 | 82.92 | 79.07 | 77.81 | 71.90 | 57.89 | 15.17 |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+
+weights/aug_yolactpp_longerer/yolact_plus_base_219_150000.pth
+Config not specified. Parsed yolact_plus_base_config from the file name.
+
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+coco detection……
+dataset 
+526
+Loading model... Done.
+
+
+Saving data...
+Calculating mAP...
+
+       |  all  |  .50  |  .55  |  .60  |  .65  |  .70  |  .75  |  .80  |  .85  |  .90  |  .95  |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+   box | 62.21 | 87.43 | 86.20 | 85.99 | 82.93 | 78.90 | 71.33 | 59.07 | 41.89 | 23.22 |  5.16 |
+  mask | 72.93 | 87.43 | 87.24 | 85.99 | 84.76 | 82.29 | 80.44 | 77.26 | 71.35 | 58.29 | 14.31 |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+
+weights/aug_yolactpp_longerer/yolact_plus_base_233_160000.pth
+Config not specified. Parsed yolact_plus_base_config from the file name.
+
+loading annotations into memory...
+Done (t=0.02s)
+creating index...
+index created!
+coco detection……
+dataset 
+526
+Loading model... Done.
+
+
+Saving data...
+Calculating mAP...
+
+       |  all  |  .50  |  .55  |  .60  |  .65  |  .70  |  .75  |  .80  |  .85  |  .90  |  .95  |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+   box | 61.75 | 88.16 | 86.17 | 84.72 | 82.04 | 77.70 | 71.57 | 58.65 | 40.83 | 22.89 |  4.78 |
+  mask | 72.87 | 87.25 | 86.16 | 85.93 | 84.80 | 82.40 | 79.63 | 77.39 | 71.15 | 58.19 | 15.81 |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+
+weights/aug_yolactpp_longerer/yolact_plus_base_248_170000.pth
+Config not specified. Parsed yolact_plus_base_config from the file name.
+
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+coco detection……
+dataset 
+526
+Loading model... Done.
+
+
+Saving data...
+Calculating mAP...
+
+       |  all  |  .50  |  .55  |  .60  |  .65  |  .70  |  .75  |  .80  |  .85  |  .90  |  .95  |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+   box | 61.83 | 88.24 | 87.09 | 85.91 | 83.03 | 78.62 | 71.50 | 57.55 | 42.06 | 20.55 |  3.79 |
+  mask | 72.51 | 87.10 | 85.99 | 85.74 | 84.64 | 82.05 | 79.92 | 76.70 | 70.72 | 56.97 | 15.22 |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+
+weights/aug_yolactpp_longerer/yolact_plus_base_263_180000.pth
+Config not specified. Parsed yolact_plus_base_config from the file name.
+
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+coco detection……
+dataset 
+526
+Loading model... Done.
+
+
+Saving data...
+Calculating mAP...
+
+       |  all  |  .50  |  .55  |  .60  |  .65  |  .70  |  .75  |  .80  |  .85  |  .90  |  .95  |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+   box | 60.92 | 86.40 | 86.18 | 83.93 | 82.02 | 76.57 | 69.31 | 57.37 | 40.83 | 21.84 |  4.72 |
+  mask | 72.66 | 86.25 | 86.10 | 84.91 | 83.79 | 82.18 | 79.54 | 77.26 | 71.03 | 59.12 | 16.42 |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+
+weights/aug_yolactpp_longerer/yolact_plus_base_277_190000.pth
+Config not specified. Parsed yolact_plus_base_config from the file name.
+
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+coco detection……
+dataset 
+526
+Loading model... Done.
+
+
+Saving data...
+Calculating mAP...
+
+       |  all  |  .50  |  .55  |  .60  |  .65  |  .70  |  .75  |  .80  |  .85  |  .90  |  .95  |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+   box | 60.99 | 86.37 | 85.17 | 83.89 | 81.43 | 77.47 | 70.05 | 58.58 | 41.34 | 21.31 |  4.30 |
+  mask | 71.46 | 85.14 | 84.93 | 83.85 | 82.77 | 81.40 | 78.49 | 76.02 | 70.05 | 56.84 | 15.11 |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+
+weights/aug_yolactpp_longerer/yolact_plus_base_29_20000.pth
+Config not specified. Parsed yolact_plus_base_config from the file name.
+
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+coco detection……
+dataset 
+526
+Loading model... Done.
+
+
+Saving data...
+Calculating mAP...
+
+       |  all  |  .50  |  .55  |  .60  |  .65  |  .70  |  .75  |  .80  |  .85  |  .90  |  .95  |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+   box | 61.71 | 86.21 | 85.12 | 83.76 | 81.34 | 77.81 | 71.66 | 61.62 | 45.23 | 22.20 |  2.14 |
+  mask | 68.53 | 85.18 | 84.99 | 82.70 | 81.08 | 79.91 | 77.21 | 72.21 | 64.03 | 48.92 |  9.03 |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+
+weights/aug_yolactpp_longerer/yolact_plus_base_292_200000.pth
+Config not specified. Parsed yolact_plus_base_config from the file name.
+
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+coco detection……
+dataset 
+526
+Loading model... Done.
+
+
+Saving data...
+Calculating mAP...
+
+       |  all  |  .50  |  .55  |  .60  |  .65  |  .70  |  .75  |  .80  |  .85  |  .90  |  .95  |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+   box | 60.47 | 87.02 | 85.91 | 84.43 | 81.77 | 77.53 | 68.41 | 55.33 | 38.97 | 21.25 |  4.05 |
+  mask | 72.51 | 87.10 | 85.96 | 84.85 | 83.71 | 82.40 | 79.64 | 77.38 | 71.04 | 57.48 | 15.54 |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+
+weights/aug_yolactpp_longerer/yolact_plus_base_307_210000.pth
+Config not specified. Parsed yolact_plus_base_config from the file name.
+
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+coco detection……
+dataset 
+526
+Loading model... Done.
+
+
+Saving data...
+Calculating mAP...
+
+       |  all  |  .50  |  .55  |  .60  |  .65  |  .70  |  .75  |  .80  |  .85  |  .90  |  .95  |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+   box | 60.77 | 86.21 | 85.24 | 83.61 | 81.98 | 76.53 | 69.54 | 58.19 | 40.56 | 20.95 |  4.92 |
+  mask | 71.57 | 86.36 | 85.29 | 84.10 | 83.78 | 81.32 | 78.69 | 76.53 | 69.17 | 55.68 | 14.82 |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+
+weights/aug_yolactpp_longerer/yolact_plus_base_321_220000.pth
+Config not specified. Parsed yolact_plus_base_config from the file name.
+
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+coco detection……
+dataset 
+526
+Loading model... Done.
+
+
+Saving data...
+Calculating mAP...
+
+       |  all  |  .50  |  .55  |  .60  |  .65  |  .70  |  .75  |  .80  |  .85  |  .90  |  .95  |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+   box | 60.39 | 87.18 | 86.01 | 83.07 | 81.25 | 76.83 | 68.26 | 57.39 | 39.74 | 20.00 |  4.16 |
+  mask | 72.22 | 87.16 | 86.07 | 85.84 | 83.69 | 82.29 | 79.29 | 76.89 | 69.61 | 57.27 | 14.04 |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+
+weights/aug_yolactpp_longerer/yolact_plus_base_336_230000.pth
+Config not specified. Parsed yolact_plus_base_config from the file name.
+
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+coco detection……
+dataset 
+526
+Loading model... Done.
+
+
+Saving data...
+Calculating mAP...
+
+       |  all  |  .50  |  .55  |  .60  |  .65  |  .70  |  .75  |  .80  |  .85  |  .90  |  .95  |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+   box | 60.67 | 87.16 | 85.82 | 84.46 | 81.51 | 76.79 | 68.73 | 56.30 | 39.52 | 20.97 |  5.46 |
+  mask | 72.41 | 87.31 | 86.20 | 84.94 | 83.89 | 82.39 | 79.72 | 77.28 | 70.24 | 56.95 | 15.22 |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+
+weights/aug_yolactpp_longerer/yolact_plus_base_350_240000.pth
+Config not specified. Parsed yolact_plus_base_config from the file name.
+
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+coco detection……
+dataset 
+526
+Loading model... Done.
+
+
+Saving data...
+Calculating mAP...
+
+       |  all  |  .50  |  .55  |  .60  |  .65  |  .70  |  .75  |  .80  |  .85  |  .90  |  .95  |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+   box | 61.01 | 88.00 | 85.82 | 84.27 | 81.22 | 77.31 | 68.89 | 57.02 | 41.14 | 21.01 |  5.43 |
+  mask | 72.46 | 87.30 | 87.10 | 85.88 | 84.78 | 82.22 | 79.53 | 76.14 | 70.10 | 56.77 | 14.76 |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+
+weights/aug_yolactpp_longerer/yolact_plus_base_365_250000.pth
+Config not specified. Parsed yolact_plus_base_config from the file name.
+
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+coco detection……
+dataset 
+526
+Loading model... Done.
+
+
+Saving data...
+Calculating mAP...
+
+       |  all  |  .50  |  .55  |  .60  |  .65  |  .70  |  .75  |  .80  |  .85  |  .90  |  .95  |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+   box | 60.77 | 87.97 | 85.92 | 84.27 | 81.00 | 76.71 | 69.31 | 56.84 | 39.77 | 21.28 |  4.67 |
+  mask | 72.76 | 87.40 | 87.22 | 86.00 | 84.91 | 83.33 | 79.60 | 77.32 | 70.92 | 56.54 | 14.38 |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+
+weights/aug_yolactpp_longerer/yolact_plus_base_380_260000.pth
+Config not specified. Parsed yolact_plus_base_config from the file name.
+
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+coco detection……
+dataset 
+526
+Loading model... Done.
+
+
+Saving data...
+Calculating mAP...
+
+       |  all  |  .50  |  .55  |  .60  |  .65  |  .70  |  .75  |  .80  |  .85  |  .90  |  .95  |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+   box | 61.06 | 86.98 | 85.73 | 84.15 | 82.28 | 77.24 | 71.05 | 56.96 | 39.34 | 22.05 |  4.80 |
+  mask | 72.37 | 87.29 | 86.15 | 84.89 | 84.62 | 82.05 | 79.45 | 77.23 | 70.17 | 56.99 | 14.88 |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+
+weights/aug_yolactpp_longerer/yolact_plus_base_394_270000.pth
+Config not specified. Parsed yolact_plus_base_config from the file name.
+
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+coco detection……
+dataset 
+526
+Loading model... Done.
+
+
+Saving data...
+Calculating mAP...
+
+       |  all  |  .50  |  .55  |  .60  |  .65  |  .70  |  .75  |  .80  |  .85  |  .90  |  .95  |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+   box | 60.58 | 87.02 | 85.98 | 84.48 | 81.12 | 76.77 | 69.38 | 57.24 | 38.92 | 20.45 |  4.46 |
+  mask | 72.09 | 87.17 | 86.01 | 84.85 | 83.71 | 82.20 | 79.35 | 76.20 | 70.17 | 56.36 | 14.90 |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+
+weights/aug_yolactpp_longerer/yolact_plus_base_409_280000.pth
+Config not specified. Parsed yolact_plus_base_config from the file name.
+
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+coco detection……
+dataset 
+526
+Loading model... Done.
+
+
+Saving data...
+Calculating mAP...
+
+       |  all  |  .50  |  .55  |  .60  |  .65  |  .70  |  .75  |  .80  |  .85  |  .90  |  .95  |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+   box | 61.08 | 87.03 | 85.80 | 84.32 | 81.26 | 77.04 | 69.63 | 58.10 | 41.51 | 21.79 |  4.33 |
+  mask | 72.59 | 87.39 | 87.21 | 85.94 | 84.79 | 82.26 | 79.66 | 77.27 | 70.19 | 56.75 | 14.46 |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+
+weights/aug_yolactpp_longerer/yolact_plus_base_423_290000.pth
+Config not specified. Parsed yolact_plus_base_config from the file name.
+
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+coco detection……
+dataset 
+526
+Loading model... Done.
+
+
+Saving data...
+Calculating mAP...
+
+       |  all  |  .50  |  .55  |  .60  |  .65  |  .70  |  .75  |  .80  |  .85  |  .90  |  .95  |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+   box | 60.22 | 85.99 | 84.82 | 83.17 | 81.22 | 76.96 | 68.55 | 56.43 | 39.26 | 21.21 |  4.60 |
+  mask | 71.64 | 86.35 | 85.21 | 83.96 | 83.78 | 81.32 | 78.55 | 76.22 | 69.94 | 56.61 | 14.45 |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+
+weights/aug_yolactpp_longerer/yolact_plus_base_43_30000.pth
+Config not specified. Parsed yolact_plus_base_config from the file name.
+
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+coco detection……
+dataset 
+526
+Loading model... Done.
+
+
+Saving data...
+Calculating mAP...
+
+       |  all  |  .50  |  .55  |  .60  |  .65  |  .70  |  .75  |  .80  |  .85  |  .90  |  .95  |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+   box | 60.00 | 86.35 | 84.94 | 83.69 | 79.82 | 74.24 | 66.45 | 57.04 | 42.19 | 22.64 |  2.63 |
+  mask | 67.52 | 85.70 | 84.55 | 83.28 | 80.54 | 79.16 | 75.17 | 70.39 | 61.97 | 45.86 |  8.61 |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+
+weights/aug_yolactpp_longerer/yolact_plus_base_438_300000.pth
+Config not specified. Parsed yolact_plus_base_config from the file name.
+
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+coco detection……
+dataset 
+526
+Loading model... Done.
+
+
+Saving data...
+Calculating mAP...
+
+       |  all  |  .50  |  .55  |  .60  |  .65  |  .70  |  .75  |  .80  |  .85  |  .90  |  .95  |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+   box | 60.40 | 86.06 | 84.76 | 83.14 | 81.05 | 76.75 | 68.66 | 56.68 | 40.28 | 21.79 |  4.87 |
+  mask | 71.57 | 86.37 | 85.18 | 84.89 | 83.77 | 81.24 | 78.52 | 76.20 | 69.06 | 56.42 | 14.08 |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+
+weights/aug_yolactpp_longerer/yolact_plus_base_58_40000.pth
+Config not specified. Parsed yolact_plus_base_config from the file name.
+
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+coco detection……
+dataset 
+526
+Loading model... Done.
+
+
+Saving data...
+Calculating mAP...
+
+       |  all  |  .50  |  .55  |  .60  |  .65  |  .70  |  .75  |  .80  |  .85  |  .90  |  .95  |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+   box | 59.52 | 87.50 | 86.37 | 83.72 | 80.08 | 75.00 | 67.26 | 55.78 | 37.19 | 19.77 |  2.54 |
+  mask | 68.31 | 85.91 | 84.68 | 83.52 | 81.05 | 79.84 | 76.26 | 71.43 | 63.34 | 48.23 |  8.81 |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+
+weights/aug_yolactpp_longerer/yolact_plus_base_73_50000.pth
+Config not specified. Parsed yolact_plus_base_config from the file name.
+
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+coco detection……
+dataset 
+526
+Loading model... Done.
+
+
+Saving data...
+Calculating mAP...
+
+       |  all  |  .50  |  .55  |  .60  |  .65  |  .70  |  .75  |  .80  |  .85  |  .90  |  .95  |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+   box | 59.23 | 87.94 | 86.58 | 84.41 | 81.83 | 77.61 | 64.37 | 52.51 | 34.21 | 18.84 |  4.02 |
+  mask | 71.28 | 87.09 | 86.05 | 84.76 | 82.74 | 81.52 | 80.25 | 75.85 | 69.23 | 53.72 | 11.53 |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+
+weights/aug_yolactpp_longerer/yolact_plus_base_87_60000.pth
+Config not specified. Parsed yolact_plus_base_config from the file name.
+
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+coco detection……
+dataset 
+526
+Loading model... Done.
+
+
+Saving data...
+Calculating mAP...
+
+       |  all  |  .50  |  .55  |  .60  |  .65  |  .70  |  .75  |  .80  |  .85  |  .90  |  .95  |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+   box | 60.96 | 87.88 | 86.75 | 85.62 | 81.55 | 76.18 | 69.29 | 58.17 | 40.67 | 20.12 |  3.39 |
+  mask | 68.97 | 87.54 | 86.49 | 84.41 | 83.12 | 80.64 | 76.36 | 71.70 | 63.45 | 46.80 |  9.21 |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+

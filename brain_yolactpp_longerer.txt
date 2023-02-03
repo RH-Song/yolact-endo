@@ -1,0 +1,660 @@
+weights/brain_yolactpp_longerer/yolact_plus_base_126_40000.pth
+Config not specified. Parsed yolact_plus_base_config from the file name.
+
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+coco detection……
+dataset 
+526
+Loading model... Done.
+
+
+Saving data...
+Calculating mAP...
+
+       |  all  |  .50  |  .55  |  .60  |  .65  |  .70  |  .75  |  .80  |  .85  |  .90  |  .95  |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+   box | 62.20 | 89.16 | 87.95 | 85.31 | 82.83 | 77.92 | 71.61 | 60.89 | 44.22 | 19.66 |  2.43 |
+  mask | 71.52 | 87.31 | 86.28 | 86.04 | 84.69 | 82.41 | 80.99 | 76.76 | 67.88 | 53.91 |  8.91 |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+
+weights/brain_yolactpp_longerer/yolact_plus_base_157_50000.pth
+Config not specified. Parsed yolact_plus_base_config from the file name.
+
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+coco detection……
+dataset 
+526
+Loading model... Done.
+
+
+Saving data...
+Calculating mAP...
+
+       |  all  |  .50  |  .55  |  .60  |  .65  |  .70  |  .75  |  .80  |  .85  |  .90  |  .95  |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+   box | 61.59 | 88.33 | 87.13 | 85.26 | 82.91 | 76.93 | 70.59 | 60.11 | 43.86 | 18.58 |  2.25 |
+  mask | 69.67 | 87.18 | 86.18 | 84.97 | 82.42 | 80.98 | 78.64 | 73.67 | 64.73 | 49.26 |  8.67 |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+
+weights/brain_yolactpp_longerer/yolact_plus_base_189_60000.pth
+Config not specified. Parsed yolact_plus_base_config from the file name.
+
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+coco detection……
+dataset 
+526
+Loading model... Done.
+
+
+Saving data...
+Calculating mAP...
+
+       |  all  |  .50  |  .55  |  .60  |  .65  |  .70  |  .75  |  .80  |  .85  |  .90  |  .95  |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+   box | 59.34 | 84.75 | 83.46 | 80.86 | 79.61 | 74.25 | 66.79 | 57.65 | 41.26 | 21.83 |  2.95 |
+  mask | 68.70 | 84.44 | 83.19 | 81.92 | 79.46 | 78.16 | 75.29 | 71.96 | 65.55 | 53.83 | 13.16 |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+
+weights/brain_yolactpp_longerer/yolact_plus_base_220_70000.pth
+Config not specified. Parsed yolact_plus_base_config from the file name.
+
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+coco detection……
+dataset 
+526
+Loading model... Done.
+
+
+Saving data...
+Calculating mAP...
+
+       |  all  |  .50  |  .55  |  .60  |  .65  |  .70  |  .75  |  .80  |  .85  |  .90  |  .95  |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+   box | 57.29 | 85.32 | 83.09 | 80.50 | 77.04 | 71.60 | 62.88 | 52.00 | 35.85 | 20.16 |  4.47 |
+  mask | 67.73 | 84.25 | 83.19 | 82.19 | 80.55 | 78.13 | 74.42 | 70.33 | 63.91 | 50.56 |  9.72 |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+
+weights/brain_yolactpp_longerer/yolact_plus_base_252_80000.pth
+Config not specified. Parsed yolact_plus_base_config from the file name.
+
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+coco detection……
+dataset 
+526
+Loading model... Done.
+
+
+Saving data...
+Calculating mAP...
+
+       |  all  |  .50  |  .55  |  .60  |  .65  |  .70  |  .75  |  .80  |  .85  |  .90  |  .95  |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+   box | 59.17 | 85.42 | 84.07 | 81.28 | 76.90 | 73.29 | 65.99 | 56.93 | 41.95 | 22.70 |  3.15 |
+  mask | 67.74 | 84.42 | 83.34 | 81.81 | 80.32 | 77.92 | 75.10 | 70.43 | 63.14 | 50.55 | 10.38 |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+
+weights/brain_yolactpp_longerer/yolact_plus_base_283_90000.pth
+Config not specified. Parsed yolact_plus_base_config from the file name.
+
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+coco detection……
+dataset 
+526
+Loading model... Done.
+
+
+Saving data...
+Calculating mAP...
+
+       |  all  |  .50  |  .55  |  .60  |  .65  |  .70  |  .75  |  .80  |  .85  |  .90  |  .95  |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+   box | 60.40 | 86.42 | 84.97 | 82.38 | 79.82 | 75.57 | 68.83 | 58.20 | 42.90 | 21.34 |  3.53 |
+  mask | 68.96 | 85.19 | 84.99 | 83.42 | 80.86 | 78.29 | 75.46 | 72.02 | 65.27 | 52.94 | 11.17 |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+
+weights/brain_yolactpp_longerer/yolact_plus_base_31_10000.pth
+Config not specified. Parsed yolact_plus_base_config from the file name.
+
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+coco detection……
+dataset 
+526
+Loading model... Done.
+
+
+Saving data...
+Calculating mAP...
+
+       |  all  |  .50  |  .55  |  .60  |  .65  |  .70  |  .75  |  .80  |  .85  |  .90  |  .95  |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+   box | 51.81 | 85.17 | 82.44 | 78.84 | 72.92 | 64.95 | 55.27 | 43.88 | 26.69 |  7.79 |  0.15 |
+  mask | 61.02 | 83.88 | 82.69 | 79.68 | 76.20 | 73.81 | 68.36 | 60.94 | 49.16 | 32.27 |  3.17 |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+
+weights/brain_yolactpp_longerer/yolact_plus_base_315_100000.pth
+Config not specified. Parsed yolact_plus_base_config from the file name.
+
+loading annotations into memory...
+Done (t=0.02s)
+creating index...
+index created!
+coco detection……
+dataset 
+526
+Loading model... Done.
+
+
+Saving data...
+Calculating mAP...
+
+       |  all  |  .50  |  .55  |  .60  |  .65  |  .70  |  .75  |  .80  |  .85  |  .90  |  .95  |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+   box | 59.15 | 85.40 | 84.19 | 81.86 | 79.22 | 75.17 | 67.96 | 56.94 | 38.35 | 18.51 |  3.85 |
+  mask | 68.92 | 84.45 | 84.27 | 82.92 | 80.26 | 78.97 | 76.48 | 72.90 | 65.46 | 50.97 | 12.52 |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+
+weights/brain_yolactpp_longerer/yolact_plus_base_347_110000.pth
+Config not specified. Parsed yolact_plus_base_config from the file name.
+
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+coco detection……
+dataset 
+526
+Loading model... Done.
+
+
+Saving data...
+Calculating mAP...
+
+       |  all  |  .50  |  .55  |  .60  |  .65  |  .70  |  .75  |  .80  |  .85  |  .90  |  .95  |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+   box | 62.79 | 86.80 | 85.72 | 84.32 | 82.49 | 77.69 | 73.63 | 62.48 | 46.17 | 23.68 |  4.94 |
+  mask | 71.58 | 85.51 | 85.49 | 84.04 | 82.60 | 81.42 | 79.97 | 74.85 | 69.38 | 57.72 | 14.77 |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+
+weights/brain_yolactpp_longerer/yolact_plus_base_378_120000.pth
+Config not specified. Parsed yolact_plus_base_config from the file name.
+
+loading annotations into memory...
+Done (t=0.02s)
+creating index...
+index created!
+coco detection……
+dataset 
+526
+Loading model... Done.
+
+
+Saving data...
+Calculating mAP...
+
+       |  all  |  .50  |  .55  |  .60  |  .65  |  .70  |  .75  |  .80  |  .85  |  .90  |  .95  |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+   box | 61.36 | 85.77 | 84.54 | 83.15 | 80.14 | 76.14 | 70.69 | 60.38 | 43.66 | 23.31 |  5.79 |
+  mask | 70.52 | 85.16 | 84.16 | 83.74 | 80.91 | 79.90 | 78.21 | 74.22 | 68.99 | 55.99 | 13.93 |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+
+weights/brain_yolactpp_longerer/yolact_plus_base_410_130000.pth
+Config not specified. Parsed yolact_plus_base_config from the file name.
+
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+coco detection……
+dataset 
+526
+Loading model... Done.
+
+
+Saving data...
+Calculating mAP...
+
+       |  all  |  .50  |  .55  |  .60  |  .65  |  .70  |  .75  |  .80  |  .85  |  .90  |  .95  |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+   box | 61.93 | 86.63 | 85.53 | 84.19 | 81.74 | 77.67 | 70.48 | 61.04 | 43.66 | 22.98 |  5.35 |
+  mask | 70.79 | 85.91 | 84.85 | 83.56 | 81.69 | 80.52 | 78.11 | 73.84 | 68.58 | 56.95 | 13.91 |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+
+weights/brain_yolactpp_longerer/yolact_plus_base_441_140000.pth
+Config not specified. Parsed yolact_plus_base_config from the file name.
+
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+coco detection……
+dataset 
+526
+Loading model... Done.
+
+
+Saving data...
+Calculating mAP...
+
+       |  all  |  .50  |  .55  |  .60  |  .65  |  .70  |  .75  |  .80  |  .85  |  .90  |  .95  |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+   box | 61.42 | 85.81 | 84.62 | 83.25 | 81.66 | 77.58 | 70.14 | 60.68 | 42.86 | 22.27 |  5.39 |
+  mask | 70.54 | 85.04 | 83.99 | 83.64 | 80.89 | 80.67 | 78.18 | 73.97 | 68.14 | 57.19 | 13.68 |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+
+weights/brain_yolactpp_longerer/yolact_plus_base_473_150000.pth
+Config not specified. Parsed yolact_plus_base_config from the file name.
+
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+coco detection……
+dataset 
+526
+Loading model... Done.
+
+
+Saving data...
+Calculating mAP...
+
+       |  all  |  .50  |  .55  |  .60  |  .65  |  .70  |  .75  |  .80  |  .85  |  .90  |  .95  |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+   box | 61.06 | 85.61 | 84.39 | 83.07 | 80.20 | 77.18 | 70.65 | 58.80 | 41.63 | 23.42 |  5.64 |
+  mask | 70.19 | 85.05 | 84.00 | 82.65 | 80.66 | 79.65 | 77.93 | 73.75 | 67.96 | 56.39 | 13.86 |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+
+weights/brain_yolactpp_longerer/yolact_plus_base_504_160000.pth
+Config not specified. Parsed yolact_plus_base_config from the file name.
+
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+coco detection……
+dataset 
+526
+Loading model... Done.
+
+
+Saving data...
+Calculating mAP...
+
+       |  all  |  .50  |  .55  |  .60  |  .65  |  .70  |  .75  |  .80  |  .85  |  .90  |  .95  |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+   box | 62.33 | 86.57 | 85.53 | 84.28 | 82.68 | 78.80 | 72.08 | 60.79 | 44.07 | 23.09 |  5.41 |
+  mask | 71.00 | 85.04 | 84.91 | 83.63 | 81.99 | 80.70 | 78.98 | 75.30 | 69.14 | 57.38 | 12.89 |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+
+weights/brain_yolactpp_longerer/yolact_plus_base_536_170000.pth
+Config not specified. Parsed yolact_plus_base_config from the file name.
+
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+coco detection……
+dataset 
+526
+Loading model... Done.
+
+
+Saving data...
+Calculating mAP...
+
+       |  all  |  .50  |  .55  |  .60  |  .65  |  .70  |  .75  |  .80  |  .85  |  .90  |  .95  |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+   box | 61.92 | 86.52 | 85.37 | 84.09 | 81.41 | 78.39 | 71.95 | 60.10 | 43.58 | 22.56 |  5.20 |
+  mask | 70.99 | 85.10 | 84.93 | 83.66 | 81.60 | 80.56 | 78.91 | 75.12 | 69.24 | 56.90 | 13.84 |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+
+weights/brain_yolactpp_longerer/yolact_plus_base_567_180000.pth
+Config not specified. Parsed yolact_plus_base_config from the file name.
+
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+coco detection……
+dataset 
+526
+Loading model... Done.
+
+
+Saving data...
+Calculating mAP...
+
+       |  all  |  .50  |  .55  |  .60  |  .65  |  .70  |  .75  |  .80  |  .85  |  .90  |  .95  |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+   box | 59.96 | 84.53 | 83.34 | 81.96 | 79.38 | 75.75 | 69.66 | 56.85 | 41.34 | 21.40 |  5.35 |
+  mask | 70.00 | 84.27 | 83.20 | 82.86 | 81.03 | 80.03 | 77.35 | 73.82 | 67.95 | 55.88 | 13.66 |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+
+weights/brain_yolactpp_longerer/yolact_plus_base_599_190000.pth
+Config not specified. Parsed yolact_plus_base_config from the file name.
+
+loading annotations into memory...
+Done (t=0.02s)
+creating index...
+index created!
+coco detection……
+dataset 
+526
+Loading model... Done.
+
+
+Saving data...
+Calculating mAP...
+
+       |  all  |  .50  |  .55  |  .60  |  .65  |  .70  |  .75  |  .80  |  .85  |  .90  |  .95  |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+   box | 62.07 | 85.74 | 84.68 | 83.28 | 81.73 | 78.43 | 71.50 | 60.41 | 45.11 | 23.30 |  6.51 |
+  mask | 70.67 | 85.03 | 84.90 | 83.71 | 81.82 | 80.64 | 77.48 | 74.53 | 68.39 | 56.53 | 13.70 |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+
+weights/brain_yolactpp_longerer/yolact_plus_base_630_200000.pth
+Config not specified. Parsed yolact_plus_base_config from the file name.
+
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+coco detection……
+dataset 
+526
+Loading model... Done.
+
+
+Saving data...
+Calculating mAP...
+
+       |  all  |  .50  |  .55  |  .60  |  .65  |  .70  |  .75  |  .80  |  .85  |  .90  |  .95  |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+   box | 60.57 | 85.60 | 84.34 | 82.93 | 80.36 | 76.18 | 70.52 | 58.17 | 41.75 | 20.69 |  5.14 |
+  mask | 70.27 | 84.95 | 83.90 | 83.58 | 80.71 | 79.65 | 77.97 | 74.18 | 67.96 | 56.78 | 13.03 |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+
+weights/brain_yolactpp_longerer/yolact_plus_base_63_20000.pth
+Config not specified. Parsed yolact_plus_base_config from the file name.
+
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+coco detection……
+dataset 
+526
+Loading model... Done.
+
+
+Saving data...
+Calculating mAP...
+
+       |  all  |  .50  |  .55  |  .60  |  .65  |  .70  |  .75  |  .80  |  .85  |  .90  |  .95  |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+   box | 58.80 | 85.37 | 84.20 | 82.90 | 79.42 | 74.77 | 68.65 | 57.95 | 41.29 | 12.90 |  0.53 |
+  mask | 66.56 | 84.08 | 83.88 | 81.50 | 79.77 | 77.08 | 73.32 | 69.35 | 61.83 | 48.17 |  6.59 |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+
+weights/brain_yolactpp_longerer/yolact_plus_base_662_210000.pth
+Config not specified. Parsed yolact_plus_base_config from the file name.
+
+loading annotations into memory...
+Done (t=0.02s)
+creating index...
+index created!
+coco detection……
+dataset 
+526
+Loading model... Done.
+
+
+Saving data...
+Calculating mAP...
+
+       |  all  |  .50  |  .55  |  .60  |  .65  |  .70  |  .75  |  .80  |  .85  |  .90  |  .95  |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+   box | 61.78 | 86.70 | 85.32 | 83.77 | 81.60 | 78.45 | 71.36 | 59.82 | 43.23 | 21.98 |  5.54 |
+  mask | 71.04 | 86.00 | 84.93 | 83.70 | 81.75 | 81.59 | 79.06 | 75.23 | 69.02 | 56.06 | 13.07 |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+
+weights/brain_yolactpp_longerer/yolact_plus_base_694_220000.pth
+Config not specified. Parsed yolact_plus_base_config from the file name.
+
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+coco detection……
+dataset 
+526
+Loading model... Done.
+
+
+Saving data...
+Calculating mAP...
+
+       |  all  |  .50  |  .55  |  .60  |  .65  |  .70  |  .75  |  .80  |  .85  |  .90  |  .95  |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+   box | 61.61 | 85.76 | 85.52 | 83.21 | 81.71 | 77.68 | 71.68 | 60.80 | 43.12 | 21.42 |  5.17 |
+  mask | 70.12 | 85.06 | 84.02 | 82.79 | 80.93 | 79.75 | 78.17 | 74.50 | 67.99 | 55.58 | 12.45 |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+
+weights/brain_yolactpp_longerer/yolact_plus_base_725_230000.pth
+Config not specified. Parsed yolact_plus_base_config from the file name.
+
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+coco detection……
+dataset 
+526
+Loading model... Done.
+
+
+Saving data...
+Calculating mAP...
+
+       |  all  |  .50  |  .55  |  .60  |  .65  |  .70  |  .75  |  .80  |  .85  |  .90  |  .95  |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+   box | 61.23 | 86.66 | 85.39 | 83.97 | 81.31 | 76.11 | 69.78 | 59.18 | 41.96 | 22.54 |  5.42 |
+  mask | 70.27 | 84.85 | 83.80 | 83.54 | 81.64 | 79.53 | 77.57 | 74.17 | 68.13 | 56.27 | 13.20 |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+
+weights/brain_yolactpp_longerer/yolact_plus_base_757_240000.pth
+Config not specified. Parsed yolact_plus_base_config from the file name.
+
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+coco detection……
+dataset 
+526
+Loading model... Done.
+
+
+Saving data...
+Calculating mAP...
+
+       |  all  |  .50  |  .55  |  .60  |  .65  |  .70  |  .75  |  .80  |  .85  |  .90  |  .95  |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+   box | 61.71 | 86.75 | 86.35 | 84.16 | 81.10 | 77.70 | 71.68 | 59.68 | 42.03 | 22.17 |  5.45 |
+  mask | 70.75 | 85.93 | 84.83 | 83.59 | 81.83 | 80.58 | 77.90 | 75.37 | 68.34 | 56.11 | 13.00 |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+
+weights/brain_yolactpp_longerer/yolact_plus_base_788_250000.pth
+Config not specified. Parsed yolact_plus_base_config from the file name.
+
+loading annotations into memory...
+Done (t=0.02s)
+creating index...
+index created!
+coco detection……
+dataset 
+526
+Loading model... Done.
+
+
+Saving data...
+Calculating mAP...
+
+       |  all  |  .50  |  .55  |  .60  |  .65  |  .70  |  .75  |  .80  |  .85  |  .90  |  .95  |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+   box | 61.68 | 86.72 | 85.38 | 84.12 | 81.18 | 77.44 | 71.42 | 59.79 | 42.93 | 23.00 |  4.84 |
+  mask | 71.20 | 85.91 | 84.84 | 84.57 | 82.65 | 80.55 | 78.75 | 75.32 | 69.27 | 57.13 | 13.05 |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+
+weights/brain_yolactpp_longerer/yolact_plus_base_820_260000.pth
+Config not specified. Parsed yolact_plus_base_config from the file name.
+
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+coco detection……
+dataset 
+526
+Loading model... Done.
+
+
+Saving data...
+Calculating mAP...
+
+       |  all  |  .50  |  .55  |  .60  |  .65  |  .70  |  .75  |  .80  |  .85  |  .90  |  .95  |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+   box | 61.94 | 86.69 | 85.31 | 83.98 | 81.30 | 77.56 | 71.92 | 60.52 | 43.73 | 22.95 |  5.48 |
+  mask | 71.23 | 85.85 | 84.80 | 84.55 | 82.63 | 80.61 | 78.79 | 75.39 | 69.20 | 57.53 | 12.95 |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+
+weights/brain_yolactpp_longerer/yolact_plus_base_851_270000.pth
+Config not specified. Parsed yolact_plus_base_config from the file name.
+
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+coco detection……
+dataset 
+526
+Loading model... Done.
+
+
+Saving data...
+Calculating mAP...
+
+       |  all  |  .50  |  .55  |  .60  |  .65  |  .70  |  .75  |  .80  |  .85  |  .90  |  .95  |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+   box | 61.41 | 86.67 | 85.29 | 83.91 | 81.10 | 77.71 | 71.79 | 58.20 | 42.16 | 22.50 |  4.79 |
+  mask | 71.07 | 85.91 | 84.87 | 84.62 | 81.82 | 80.57 | 77.85 | 75.44 | 69.32 | 57.23 | 13.08 |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+
+weights/brain_yolactpp_longerer/yolact_plus_base_883_280000.pth
+Config not specified. Parsed yolact_plus_base_config from the file name.
+
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+coco detection……
+dataset 
+526
+Loading model... Done.
+
+
+Saving data...
+Calculating mAP...
+
+       |  all  |  .50  |  .55  |  .60  |  .65  |  .70  |  .75  |  .80  |  .85  |  .90  |  .95  |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+   box | 61.86 | 87.67 | 86.40 | 84.05 | 81.23 | 77.51 | 71.93 | 61.01 | 41.59 | 22.32 |  4.92 |
+  mask | 71.23 | 85.82 | 84.78 | 84.55 | 82.68 | 80.61 | 78.76 | 75.47 | 69.07 | 57.14 | 13.40 |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+
+weights/brain_yolactpp_longerer/yolact_plus_base_914_290000.pth
+Config not specified. Parsed yolact_plus_base_config from the file name.
+
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+coco detection……
+dataset 
+526
+Loading model... Done.
+
+
+Saving data...
+Calculating mAP...
+
+       |  all  |  .50  |  .55  |  .60  |  .65  |  .70  |  .75  |  .80  |  .85  |  .90  |  .95  |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+   box | 61.90 | 86.71 | 86.48 | 84.25 | 81.31 | 78.30 | 71.53 | 60.34 | 42.20 | 22.97 |  4.93 |
+  mask | 71.47 | 85.99 | 84.94 | 84.71 | 82.85 | 81.60 | 78.93 | 76.37 | 69.24 | 57.36 | 12.75 |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+
+weights/brain_yolactpp_longerer/yolact_plus_base_94_30000.pth
+Config not specified. Parsed yolact_plus_base_config from the file name.
+
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+coco detection……
+dataset 
+526
+Loading model... Done.
+
+
+Saving data...
+Calculating mAP...
+
+       |  all  |  .50  |  .55  |  .60  |  .65  |  .70  |  .75  |  .80  |  .85  |  .90  |  .95  |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+   box | 58.45 | 85.90 | 84.62 | 82.15 | 78.26 | 71.99 | 64.16 | 53.12 | 40.08 | 19.44 |  4.82 |
+  mask | 67.28 | 85.85 | 83.59 | 82.13 | 80.26 | 77.80 | 74.88 | 70.87 | 61.83 | 47.26 |  8.37 |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+
+weights/brain_yolactpp_longerer/yolact_plus_base_946_300000.pth
+Config not specified. Parsed yolact_plus_base_config from the file name.
+
+loading annotations into memory...
+Done (t=0.01s)
+creating index...
+index created!
+coco detection……
+dataset 
+526
+Loading model... Done.
+
+
+Saving data...
+Calculating mAP...
+
+       |  all  |  .50  |  .55  |  .60  |  .65  |  .70  |  .75  |  .80  |  .85  |  .90  |  .95  |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+   box | 62.06 | 86.70 | 86.31 | 84.09 | 81.44 | 77.53 | 71.87 | 61.06 | 43.11 | 23.20 |  5.30 |
+  mask | 70.87 | 85.84 | 84.80 | 83.61 | 81.68 | 80.49 | 77.77 | 75.35 | 69.01 | 57.38 | 12.72 |
+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+

@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-FILES=$(ls weights/aug_dataset_50/yolact_basic_*.pth)
+FILES=$(ls weights/brain_yolactpp_longerer/yolact_plus_base_*.pth)
 for FILE in $FILES
 do
 echo $FILE
-CUDA_VISIBLE_DEVICES=0 python eval.py --trained_model=$FILE --score_threshold=0.15
+CUDA_VISIBLE_DEVICES=7 python eval.py --no_bar --trained_model=$FILE --score_threshold=0.15
 done
