@@ -496,7 +496,7 @@ coco_base_config = Config({
     'nms_conf_thresh': 0.5,
     # Boxes with IoU overlap greater than this threshold will be culled during NMS
     # 'nms_thresh': 0.5,
-    'nms_thresh': 0.5,
+    'nms_thresh': 0.2,
 
     # See mask_type for details.
     'mask_type': mask_type.direct,

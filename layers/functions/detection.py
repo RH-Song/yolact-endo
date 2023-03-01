@@ -184,6 +184,7 @@ class Detect(object):
         pyximport.install(setup_args={"include_dirs":np.get_include()}, reload_support=True)
 
         from utils.cython_nms import nms as cnms
+        from utils.cython_nms import soft_nms as snms
 
         num_classes = scores.size(0)
 
@@ -206,7 +207,9 @@ class Detect(object):
                 continue
             
             preds = torch.cat([boxes[conf_mask], cls_scores[:, None]], dim=1).cpu().numpy()
-            keep = cnms(preds, iou_threshold)
+            # keep = cnms(preds, iou_threshold)
+            # _, keep = snms(preds, sigma=0.5, Nt=iou_threshold, threshold=0.25, method=1)
+            _, keep = snms(preds, sigma=0.5, Nt=iou_threshold, threshold=0.35, method=2)
             keep = torch.Tensor(keep, device=boxes.device).long()
 
             idx_lst.append(idx[keep])
