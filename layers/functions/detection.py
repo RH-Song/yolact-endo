@@ -207,9 +207,12 @@ class Detect(object):
                 continue
             
             preds = torch.cat([boxes[conf_mask], cls_scores[:, None]], dim=1).cpu().numpy()
+            # nms
             # keep = cnms(preds, iou_threshold)
-            # _, keep = snms(preds, sigma=0.5, Nt=iou_threshold, threshold=0.25, method=1)
-            _, keep = snms(preds, sigma=0.5, Nt=iou_threshold, threshold=0.35, method=2)
+
+            # soft-nms
+            _, keep = snms(preds, sigma=0.5, Nt=iou_threshold, threshold=0.35, method=1)
+            # _, keep = snms(preds, sigma=0.5, Nt=iou_threshold, threshold=0.35, method=2)
             keep = torch.Tensor(keep, device=boxes.device).long()
 
             idx_lst.append(idx[keep])

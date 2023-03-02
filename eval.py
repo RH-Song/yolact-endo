@@ -47,10 +47,23 @@ def parse_args(argv=None):
                         help='Further restrict the number of predictions to parse')
     parser.add_argument('--cuda', default=True, type=str2bool,
                         help='Use cuda to evaulate model')
-    parser.add_argument('--fast_nms', default=False, type=str2bool,
+    # ciou
+    pparser.add_argument('--fast_nms', default=False, type=str2bool,
                         help='Whether to use a faster, but not entirely correct version of NMS.')
+    parser.add_argument('--cluster_nms', default=True, type=str2bool,
+                        help='Whether to use a fast and correct version of NMS.')		
+    parser.add_argument('--cluster_diounms', default=True, type=str2bool,
+                        help='Whether to use a fast and correct version of DIoU-NMS.')							
+    parser.add_argument('--spm', default=True, type=str2bool,
+                        help='Whether to use a score penalty mechanism for cluster NMS.')
+    parser.add_argument('--spm_dist', default=True, type=str2bool,
+                        help='Whether to use a score penalty mechanism + distance for cluster NMS.')
+    parser.add_argument('--spm_dist_weighted', default=True, type=str2bool,
+                        help='Whether to use a score penalty mechanism + distance + weighted coordinates for cluster NMS.')						
     parser.add_argument('--cross_class_nms', default=False, type=str2bool,
-                        help='Whether compute NMS cross-class or per-class.')
+                        help='Whether compute NMS cross-class or per-class. It surports above NMS strategies.')
+    # parser.add_argument('--cross_class_nms', default=False, type=str2bool,
+    #                     help='Whether compute NMS cross-class or per-class.')
     parser.add_argument('--display_masks', default=True, type=str2bool,
                         help='Whether or not to display masks over bounding boxes')
     parser.add_argument('--display_bboxes', default=True, type=str2bool, # False
@@ -884,8 +897,19 @@ def evalvideo(net:Yolact, path:str, out_path:str=None):
     cleanup_and_exit()
 
 def evaluate(net:Yolact, dataset, train_mode=False):
+    # origin
+    # net.detect.use_fast_nms = args.fast_nms
+    # net.detect.use_cross_class_nms = args.cross_class_nms
+
+    # ciou
     net.detect.use_fast_nms = args.fast_nms
+	net.detect.use_cluster_nms = args.cluster_nms
+	net.detect.use_cluster_diounms = args.cluster_diounms
+    net.detect.use_spm_nms = args.spm
+	net.detect.use_spm_dist_nms = args.spm_dist
+	net.detect.use_spm_dist_weighted_nms = args.spm_dist_weighted
     net.detect.use_cross_class_nms = args.cross_class_nms
+
     cfg.mask_proto_debug = args.mask_proto_debug
 
     # TODO Currently we do not support Fast Mask Re-scroing in evalimage, evalimages, and evalvideo
@@ -1088,6 +1112,27 @@ if __name__ == '__main__':
         args.config = model_path.model_name + '_config'
         print('Config not specified. Parsed %s from the file name.\n' % args.config)
         set_cfg(args.config)
+
+    # ciou
+    num_count=0
+	if args.cross_class_nms = True:
+	    nms='cross class'
+	else:
+	    nms='not use cross class'
+	if args.fast_nms = True:
+	    num_count = num_count + 1
+	if args.cluster_nms = True:
+	    num_count = num_count + 1
+	if args.cluster_diounms = True:
+	    num_count = num_count + 1
+	if args.spm = True:
+	    num_count = num_count + 1
+	if args.spm_dist = True:
+	    num_count = num_count + 1
+	if args.spm_dist_weighted = True:
+	    num_count = num_count + 1
+	if num_count>1:
+	     assert Exception("You must choose one NMS strategy. Options: fast_nms, cluster_nms, cluster_diounms, spm, spm_dist, spm_dist_weighted.")
 
     if args.detect:
         cfg.eval_mask_branch = False
