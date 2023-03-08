@@ -6,6 +6,7 @@ from torch.autograd import Variable
 from ..box_utils import match, log_sum_exp, decode, center_size, crop, elemwise_mask_iou, elemwise_box_iou
 
 from data import cfg, mask_type, activation_func
+import math
 
 
 def ciou(bboxes1, bboxes2):
@@ -242,6 +243,7 @@ class MultiBoxLoss(nn.Module):
             loc_p = loc_data[pos_idx].view(-1, 4)
             loc_t = loc_t[pos_idx].view(-1, 4)
             # ciou
+            # print("use ciou ...")
             losses['B'] = ciou(loc_p, loc_t) * cfg.bbox_alpha * 5
             # smooth l1 loss
             # losses['B'] = F.smooth_l1_loss(loc_p, loc_t, reduction='sum') * cfg.bbox_alpha

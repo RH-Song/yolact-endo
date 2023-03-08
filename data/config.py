@@ -28,7 +28,7 @@ COLORS = ((244,  67,  54),
 MEANS = (103.94, 116.78, 123.68)
 STD   = (57.38, 57.12, 58.40)
 
-# COCO_CLASSES = ('person', 'bicycle', 'car', 'motorcycle', 'airplane', 'bus',
+# COCO_CLASSES = ('tool', 'person', 'bicycle', 'car', 'motorcycle', 'airplane', 'bus',
 #                 'train', 'truck', 'boat', 'traffic light', 'fire hydrant',
 #                 'stop sign', 'parking meter', 'bench', 'bird', 'cat', 'dog',
 #                 'horse', 'sheep', 'cow', 'elephant', 'bear', 'zebra', 'giraffe',
@@ -53,7 +53,7 @@ COCO_LABEL_MAP = { 1:  1,  2:  2,  3:  3,  4:  4,  5:  5,  6:  6,  7:  7,  8:  8
                   54: 49, 55: 50, 56: 51, 57: 52, 58: 53, 59: 54, 60: 55, 61: 56,
                   62: 57, 63: 58, 64: 59, 65: 60, 67: 61, 70: 62, 72: 63, 73: 64,
                   74: 65, 75: 66, 76: 67, 77: 68, 78: 69, 79: 70, 80: 71, 81: 72,
-                  82: 73, 84: 74, 85: 75, 86: 76, 87: 77, 88: 78, 89: 79, 90: 80}
+                  82: 73, 84: 74, 85: 75, 86: 76, 87: 77, 88: 78, 89: 79, 90: 80, 91:81}
 # COCO_LABEL_MAP = {1:1}
 
 
@@ -460,7 +460,7 @@ fpn_base = Config({
 
 coco_base_config = Config({
     'dataset': coco2014_dataset,
-    'num_classes': 81, # This should include the background class
+    'num_classes': 82, # This should include the background class
 
     'max_iter': 400000,
 
@@ -495,8 +495,8 @@ coco_base_config = Config({
     # Examples with confidence less than this are not considered by NMS
     'nms_conf_thresh': 0.5,
     # Boxes with IoU overlap greater than this threshold will be culled during NMS
-    # 'nms_thresh': 0.5,
-    'nms_thresh': 0.2,
+    'nms_thresh': 0.5,
+    # 'nms_thresh': 0.2,
 
     # See mask_type for details.
     'mask_type': mask_type.direct,
@@ -711,15 +711,15 @@ yolact_base_config = coco_base_config.copy({
 
     # Training params
     # 'lr_steps': (280000, 600000, 700000, 750000),
-    # 'lr_steps': (35000, 75000, 82500, 92500),
+    'lr_steps': (35000, 75000, 82500, 92500),
     # 'lr_steps': (70000, 150000, 165000, 185000),
-    'lr_steps': (105000, 225000, 247500, 277500),
+    # 'lr_steps': (105000, 225000, 247500, 277500),
     # 'lr_steps': (50000, 120000, 140000, 150000),
     # 'max_iter': 800000,
-    # 'max_iter': 100000,
+    'max_iter': 100000,
     # 'max_iter': 160000,
     # 'max_iter': 200000,
-    'max_iter': 300000,
+    # 'max_iter': 300000,
     # Backbone Settings
     'backbone': resnet101_backbone.copy({
         'selected_layers': list(range(1, 4)),
