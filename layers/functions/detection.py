@@ -1,6 +1,6 @@
 import torch
 import torch.nn.functional as F
-from ..box_utils import decode, jaccard, distance, diou, index2d
+from ..box_utils import decode, jaccard, index2d
 from utils import timer
 
 from data import cfg, mask_type
@@ -28,12 +28,7 @@ class Detect(object):
         
         self.use_cross_class_nms = False
         self.use_fast_nms = False
-        self.use_cluster_nms = False
-        self.use_cluster_diounms = False
-        self.use_spm_nms = False
-        self.use_spm_dist_nms = False
-        self.use_spm_dist_weighted_nms = False		
-		
+
     def __call__(self, predictions, net):
         """
         Args:
@@ -99,170 +94,46 @@ class Detect(object):
         if scores.size(1) == 0:
             return None
         
-        if self.use_cross_class_nms:
-            if self.use_fast_nms:
+        if self.use_fast_nms:
+            if self.use_cross_class_nms:
                 boxes, masks, classes, scores = self.cc_fast_nms(boxes, masks, scores, self.nms_thresh, self.top_k)
-            if self.use_cluster_nms:
-                boxes, masks, classes, scores = self.cc_cluster_nms(boxes, masks, scores, self.nms_thresh, self.top_k)	
-            if self.use_cluster_diounms:
-                boxes, masks, classes, scores = self.cc_cluster_diounms(boxes, masks, scores, self.nms_thresh, self.top_k)
-            if self.use_spm_nms:
-                boxes, masks, classes, scores = self.cc_cluster_SPM_nms(boxes, masks, scores, self.nms_thresh, self.top_k)
-            if self.use_spm_dist_nms:
-                boxes, masks, classes, scores = self.cc_cluster_SPM_dist_nms(boxes, masks, scores, self.nms_thresh, self.top_k)
-            if self.use_spm_dist_weighted_nms:
-                boxes, masks, classes, scores = self.cc_cluster_SPM_dist_weighted_nms(boxes, masks, scores, self.nms_thresh, self.top_k)						
-
-        else:
-            if self.use_fast_nms:
+            else:
                 boxes, masks, classes, scores = self.fast_nms(boxes, masks, scores, self.nms_thresh, self.top_k)
-            if self.use_cluster_nms:
-                boxes, masks, classes, scores = self.cluster_nms(boxes, masks, scores, self.nms_thresh, self.top_k)	
-            if self.use_cluster_diounms:
-                boxes, masks, classes, scores = self.cluster_diounms(boxes, masks, scores, self.nms_thresh, self.top_k)
-            if self.use_spm_nms:
-                boxes, masks, classes, scores = self.cluster_SPM_nms(boxes, masks, scores, self.nms_thresh, self.top_k)
-            if self.use_spm_dist_nms:
-                boxes, masks, classes, scores = self.cluster_SPM_dist_nms(boxes, masks, scores, self.nms_thresh, self.top_k)
-            if self.use_spm_dist_weighted_nms:
-                boxes, masks, classes, scores = self.cluster_SPM_dist_weighted_nms(boxes, masks, scores, self.nms_thresh, self.top_k)
+        else:
+            boxes, masks, classes, scores = self.traditional_nms(boxes, masks, scores, self.nms_thresh, self.conf_thresh)
+
+            if self.use_cross_class_nms:
+                print('Warning: Cross Class Traditional NMS is not implemented.')
 
         return {'box': boxes, 'mask': masks, 'class': classes, 'score': scores}
 
 
     def cc_fast_nms(self, boxes, masks, scores, iou_threshold:float=0.5, top_k:int=200):
+        print('using cc fast nms ...............')
         # Collapse all the classes into 1 
         scores, classes = scores.max(dim=0)
-        _, idx = scores.sort(0, descending=True)
-        idx = idx[:top_k]
-        boxes_idx = boxes[idx]
-        iou = jaccard(boxes_idx, boxes_idx).triu_(diagonal=1)
-        maxA,_=torch.max(iou, dim=0)
-        idx_out = idx[maxA <= iou_threshold]
-        return boxes[idx_out], masks[idx_out], classes[idx_out], scores[idx_out]
 
-    def cc_cluster_nms(self, boxes, masks, scores, iou_threshold:float=0.5, top_k:int=200):
-        # Collapse all the classes into 1 
-        scores, classes = scores.max(dim=0)
         _, idx = scores.sort(0, descending=True)
         idx = idx[:top_k]
-        boxes_idx = boxes[idx]
-        iou = jaccard(boxes_idx, boxes_idx).triu_(diagonal=1)
-        B = iou
-        for i in range(200):
-            A=B
-            maxA,_=torch.max(A, dim=0)
-            E = (maxA<=iou_threshold).float().unsqueeze(1).expand_as(A)
-            B=iou.mul(E)
-            if A.equal(B)==True:
-                break
-        idx_out = idx[maxA <= iou_threshold]
-        return boxes[idx_out], masks[idx_out], classes[idx_out], scores[idx_out]
 
-    def cc_cluster_diounms(self, boxes, masks, scores, iou_threshold:float=0.5, top_k:int=200):
-        # Collapse all the classes into 1 
-        scores, classes = scores.max(dim=0)
-        _, idx = scores.sort(0, descending=True)
-        idx = idx[:top_k]
         boxes_idx = boxes[idx]
-        iou = diou(boxes_idx, boxes_idx).triu_(diagonal=1)
-        B = iou
-        for i in range(200):
-            A=B
-            maxA,_=torch.max(A, dim=0)
-            E = (maxA<=iou_threshold).float().unsqueeze(1).expand_as(A)
-            B=iou.mul(E)
-            if A.equal(B)==True:
-                break
-        idx_out = idx[maxA <= iou_threshold]
-        return boxes[idx_out], masks[idx_out], classes[idx_out], scores[idx_out]
-		
-    def cc_cluster_SPM_nms(self, boxes, masks, scores, iou_threshold:float=0.5, top_k:int=200):
-        # Collapse all the classes into 1 
-        scores, classes = scores.max(dim=0)
-        _, idx = scores.sort(0, descending=True)
-        idx = idx[:top_k]
-        boxes_idx = boxes[idx]
-        scores = scores[idx]
-        boxes = boxes_idx
-        masks = masks[idx]
-        classes = classes[idx]
-        iou = jaccard(boxes_idx, boxes_idx).triu_(diagonal=1)
-        B = iou
-        for i in range(200):
-            A=B
-            maxA,_=torch.max(A, dim=0)
-            E = (maxA<=iou_threshold).float().unsqueeze(1).expand_as(A)
-            B=iou.mul(E)
-            if A.equal(B)==True:
-                break
-        scores = torch.prod(torch.exp(-B**2/0.2),0)*scores
-        idx_out = scores > 0.01
-        return boxes[idx_out], masks[idx_out], classes[idx_out], scores[idx_out]
-		
-    def cc_cluster_SPM_dist_nms(self, boxes, masks, scores, iou_threshold:float=0.5, top_k:int=200):
-        # Collapse all the classes into 1 
-        scores, classes = scores.max(dim=0)
-        _, idx = scores.sort(0, descending=True)
-        idx = idx[:top_k]
-        boxes_idx = boxes[idx]
-        scores = scores[idx]
-        boxes = boxes_idx
-        masks = masks[idx]
-        classes = classes[idx]
-        iou = jaccard(boxes_idx, boxes_idx).triu_(diagonal=1)
-        B = iou
-        for i in range(200):
-            A=B
-            maxA,_=torch.max(A, dim=0)
-            E = (maxA<=iou_threshold).float().unsqueeze(1).expand_as(A)
-            B=iou.mul(E)
-            if A.equal(B)==True:
-                break
-        D=distance(boxes, boxes)
-        X = (B>=0).float()
-        scores = torch.prod(torch.min(torch.exp(-B**2/0.2)+D*((B>0).float()),X),0)*scores
-        idx_out = scores > 0.01
 
+        # Compute the pairwise IoU between the boxes
+        iou = jaccard(boxes_idx, boxes_idx)
+        
+        # Zero out the lower triangle of the cosine similarity matrix and diagonal
+        iou.triu_(diagonal=1)
+
+        # Now that everything in the diagonal and below is zeroed out, if we take the max
+        # of the IoU matrix along the columns, each column will represent the maximum IoU
+        # between this element and every element with a higher score than this element.
+        iou_max, _ = torch.max(iou, dim=0)
+
+        # Now just filter out the ones greater than the threshold, i.e., only keep boxes that
+        # don't have a higher scoring box that would supress it in normal NMS.
+        idx_out = idx[iou_max <= iou_threshold]
+        
         return boxes[idx_out], masks[idx_out], classes[idx_out], scores[idx_out]
-
-    def cc_cluster_SPM_dist_weighted_nms(self, boxes, masks, scores, iou_threshold:float=0.5, top_k:int=200):
-        # Collapse all the classes into 1 
-        scores, classes = scores.max(dim=0)
-        _, idx = scores.sort(0, descending=True)
-        idx = idx[:top_k]
-        boxes_idx = boxes[idx]
-        scores = scores[idx]
-        boxes = boxes_idx
-        masks = masks[idx]
-        classes = classes[idx]
-        n = len(scores)
-        iou = jaccard(boxes_idx, boxes_idx).triu_(diagonal=1)
-        B = iou
-        for i in range(200):
-            A=B
-            maxA,_=torch.max(A, dim=0)
-            E = (maxA<=iou_threshold).float().unsqueeze(1).expand_as(A)
-            B=iou.mul(E)
-            if A.equal(B)==True:
-                break	
-        D=distance(boxes, boxes)
-        X = (B>=0).float()
-        scores = torch.prod(torch.min(torch.exp(-B**2/0.2)+D*((B>0).float()),X),0)*scores
-        idx_out = scores > 0.01
-        weights = (B*(B>0.8).float() + torch.eye(n).cuda()) * (scores.reshape((1,n)))
-        xx1 = boxes[:,0].expand(n,n)
-        yy1 = boxes[:,1].expand(n,n)
-        xx2 = boxes[:,2].expand(n,n)
-        yy2 = boxes[:,3].expand(n,n)
-
-        weightsum=weights.sum(dim=1)
-        xx1 = (xx1*weights).sum(dim=1)/(weightsum)
-        yy1 = (yy1*weights).sum(dim=1)/(weightsum)
-        xx2 = (xx2*weights).sum(dim=1)/(weightsum)
-        yy2 = (yy2*weights).sum(dim=1)/(weightsum)
-        boxes = torch.stack([xx1, yy1, xx2, yy2], 1)
-        return boxes[idx_out], masks[idx_out], classes[idx_out], scores[idx_out]		
 
     def fast_nms(self, boxes, masks, scores, iou_threshold:float=0.5, top_k:int=200, second_threshold:bool=False):
         scores, idx = scores.sort(1, descending=True)
@@ -275,11 +146,13 @@ class Detect(object):
         boxes = boxes[idx.view(-1), :].view(num_classes, num_dets, 4)
         masks = masks[idx.view(-1), :].view(num_classes, num_dets, -1)
 
-        iou = jaccard(boxes, boxes).triu_(diagonal=1)
+        iou = jaccard(boxes, boxes)
+        iou.triu_(diagonal=1)
         iou_max, _ = iou.max(dim=1)
 
         # Now just filter out the ones higher than the threshold
         keep = (iou_max <= iou_threshold)
+
         # We should also only keep detections over the confidence threshold, but at the cost of
         # maxing out your detection count for every image, you can just not do that. Because we
         # have such a minimal amount of computation per detection (matrix mulitplication only),
@@ -287,7 +160,7 @@ class Detect(object):
         # However, when you implement this in your method, you should do this second threshold.
         if second_threshold:
             keep *= (scores > self.conf_thresh)
-        keep *= (scores > 0.01)
+
         # Assign each kept detection to its corresponding class
         classes = torch.arange(num_classes, device=boxes.device)[:, None].expand_as(keep)
         classes = classes[keep]
@@ -307,222 +180,12 @@ class Detect(object):
 
         return boxes, masks, classes, scores
 
-    def cluster_nms(self, boxes, masks, scores, iou_threshold:float=0.5, top_k:int=200, second_threshold:bool=False):
-        print("using cluster_nms")
-        scores, idx = scores.sort(1, descending=True)
-        idx = idx[:, :top_k].contiguous()
-        scores = scores[:, :top_k]
-        num_classes, num_dets = idx.size()
-
-        boxes = boxes[idx.view(-1), :].view(num_classes, num_dets, 4)
-        masks = masks[idx.view(-1), :].view(num_classes, num_dets, -1)
-
-        iou = jaccard(boxes, boxes).triu_(diagonal=1)
-        B = iou
-        for i in range(200):
-            A=B
-            maxA,_ = A.max(dim=1)
-            E = (maxA <= iou_threshold).float().unsqueeze(2).expand_as(A)
-            B=iou.mul(E)
-            if A.equal(B)==True:
-                break
-        keep = (maxA <= iou_threshold)
-        keep *= (scores > 0.01)
-        # Assign each kept detection to its corresponding class
-        classes = torch.arange(num_classes, device=boxes.device)[:, None].expand_as(keep)
-        classes = classes[keep]
-        boxes = boxes[keep]
-        masks = masks[keep]
-        scores = scores[keep]
-        # Only keep the top cfg.max_num_detections highest scores across all classes
-        scores, idx = scores.sort(0, descending=True)
-        idx = idx[:cfg.max_num_detections]
-        scores = scores[:cfg.max_num_detections]
-        classes = classes[idx]
-        boxes = boxes[idx]
-        masks = masks[idx]
-		
-        return boxes, masks, classes, scores
-
-    def cluster_diounms(self, boxes, masks, scores, iou_threshold:float=0.5, top_k:int=200, second_threshold:bool=False):
-        print("using cluster diou nms")
-        scores, idx = scores.sort(1, descending=True)
-        idx = idx[:, :top_k].contiguous()
-        scores = scores[:, :top_k]
-        num_classes, num_dets = idx.size()
-
-        boxes = boxes[idx.view(-1), :].view(num_classes, num_dets, 4)
-        masks = masks[idx.view(-1), :].view(num_classes, num_dets, -1)
-
-        iou = diou(boxes, boxes).triu_(diagonal=1)
-        B = iou
-        for i in range(200):
-            A=B
-            maxA,_ = A.max(dim=1)
-            E = (maxA <= iou_threshold).float().unsqueeze(2).expand_as(A)
-            B=iou.mul(E)
-            if A.equal(B)==True:
-                break
-        keep = (maxA <= iou_threshold) * (scores > 0.01)
-        # Assign each kept detection to its corresponding class
-        classes = torch.arange(num_classes, device=boxes.device)[:, None].expand_as(keep)
-        classes = classes[keep]
-        boxes = boxes[keep]
-        masks = masks[keep]
-        scores = scores[keep]
-        # Only keep the top cfg.max_num_detections highest scores across all classes
-        scores, idx = scores.sort(0, descending=True)
-        idx = idx[:cfg.max_num_detections]
-        scores = scores[:cfg.max_num_detections]
-        classes = classes[idx]
-        boxes = boxes[idx]
-        masks = masks[idx]
-		
-        return boxes, masks, classes, scores
-
-    def cluster_SPM_nms(self, boxes, masks, scores, iou_threshold:float=0.5, top_k:int=200, second_threshold:bool=False):
-        scores, idx = scores.sort(1, descending=True)
-        idx = idx[:, :top_k].contiguous()
-        scores = scores[:, :top_k]
-    
-        num_classes, num_dets = idx.size()
-
-        boxes = boxes[idx.view(-1), :].view(num_classes, num_dets, 4)
-        masks = masks[idx.view(-1), :].view(num_classes, num_dets, -1)
-
-        iou = jaccard(boxes, boxes).triu_(diagonal=1)
-        B = iou
-        for i in range(200):
-            A=B
-            maxA,_ = A.max(dim=1)
-            E = (maxA <= iou_threshold).float().unsqueeze(2).expand_as(A)
-            B=iou.mul(E)
-            if A.equal(B)==True:
-                break
-        scores = torch.prod(torch.exp(-B**2/0.2),1)*scores
-        keep = (scores > 0.01)
-
-        #print('keep',torch.sum(keep))
-        # Assign each kept detection to its corresponding class
-        classes = torch.arange(num_classes, device=boxes.device)[:, None].expand_as(keep)
-        classes = classes[keep]
-        boxes = boxes[keep]
-        masks = masks[keep]
-        scores = scores[keep]
-
-        # Only keep the top cfg.max_num_detections highest scores across all classes
-        scores, idx = scores.sort(0, descending=True)
-        idx = idx[:cfg.max_num_detections]
-        scores = scores[:cfg.max_num_detections]
-        classes = classes[idx]
-        boxes = boxes[idx]
-        masks = masks[idx]
-		
-        return boxes, masks, classes, scores
-
-    def cluster_SPM_dist_nms(self, boxes, masks, scores, iou_threshold:float=0.5, top_k:int=200, second_threshold:bool=False):
-        scores, idx = scores.sort(1, descending=True)
-        idx = idx[:, :top_k].contiguous()
-        scores = scores[:, :top_k]
-    
-        num_classes, num_dets = idx.size()
-
-        boxes = boxes[idx.view(-1), :].view(num_classes, num_dets, 4)
-        masks = masks[idx.view(-1), :].view(num_classes, num_dets, -1)
-
-        iou = jaccard(boxes, boxes).triu_(diagonal=1)
-        B = iou
-        for i in range(200):
-            A=B
-            maxA,_ = A.max(dim=1)
-            E = (maxA <= iou_threshold).float().unsqueeze(2).expand_as(A)
-            B=iou.mul(E)
-            if A.equal(B)==True:
-                break
-        D=distance(boxes, boxes)
-        X = (B>=0).float()
-        scores = torch.prod(torch.min(torch.exp(-B**2/0.2)+D*((B>0).float()),X),1)*scores
-        keep = (scores > 0.01)
-
-        # Assign each kept detection to its corresponding class
-        classes = torch.arange(num_classes, device=boxes.device)[:, None].expand_as(keep)
-        classes = classes[keep]
-        boxes = boxes[keep]
-        masks = masks[keep]
-        scores = scores[keep]
-
-        # Only keep the top cfg.max_num_detections highest scores across all classes
-        scores, idx = scores.sort(0, descending=True)
-        idx = idx[:cfg.max_num_detections]
-        scores = scores[:cfg.max_num_detections]
-        classes = classes[idx]
-        boxes = boxes[idx]
-        masks = masks[idx]
-		
-        return boxes, masks, classes, scores
-
-    def cluster_SPM_dist_weighted_nms(self, boxes, masks, scores, iou_threshold:float=0.5, top_k:int=200, second_threshold:bool=False):
-        scores, idx = scores.sort(1, descending=True)
-        idx = idx[:, :top_k].contiguous()
-        scores = scores[:, :top_k]
-    
-        num_classes, num_dets = idx.size()
-
-        boxes = boxes[idx.view(-1), :].view(num_classes, num_dets, 4)
-        masks = masks[idx.view(-1), :].view(num_classes, num_dets, -1)
-
-        iou = jaccard(boxes, boxes).triu_(diagonal=1)
-        B = iou
-        for i in range(200):
-            A=B
-            maxA,_ = A.max(dim=1)
-            E = (maxA <= iou_threshold).float().unsqueeze(2).expand_as(A)
-            B=iou.mul(E)
-            if A.equal(B)==True:
-                break
-        D=distance(boxes, boxes)
-        X = (B>=0).float()
-        scores = torch.prod(torch.min(torch.exp(-B**2/0.2)+D*((B>0).float()),X),1)*scores
-        keep = (scores > 0.01)
-		
-        E = keep.float().unsqueeze(2).expand_as(A)
-        B=iou.mul(E)
-        _,n = scores.size()
-        weights = (B*(B>0.8).float() + torch.eye(n).cuda().expand(80,n,n)) * (scores.unsqueeze(2).expand(80,n,n))
-        xx1 = boxes[:,:,0].unsqueeze(1).expand(80,n,n)
-        yy1 = boxes[:,:,1].unsqueeze(1).expand(80,n,n)
-        xx2 = boxes[:,:,2].unsqueeze(1).expand(80,n,n)
-        yy2 = boxes[:,:,3].unsqueeze(1).expand(80,n,n)
-
-        weightsum=weights.sum(dim=2)
-        xx1 = (xx1*weights).sum(dim=2)/(weightsum)
-        yy1 = (yy1*weights).sum(dim=2)/(weightsum)
-        xx2 = (xx2*weights).sum(dim=2)/(weightsum)
-        yy2 = (yy2*weights).sum(dim=2)/(weightsum)
-        boxes = torch.stack([xx1, yy1, xx2, yy2], 2)
-
-        # Assign each kept detection to its corresponding class
-        classes = torch.arange(num_classes, device=boxes.device)[:, None].expand_as(keep)
-        classes = classes[keep]
-        boxes = boxes[keep]
-        masks = masks[keep]
-        scores = scores[keep]
-
-        # Only keep the top cfg.max_num_detections highest scores across all classes
-        scores, idx = scores.sort(0, descending=True)
-        idx = idx[:cfg.max_num_detections]
-        scores = scores[:cfg.max_num_detections]
-        classes = classes[idx]
-        boxes = boxes[idx]
-        masks = masks[idx]
-
-        return boxes, masks, classes, scores
-
-    def traditional_nms_yolact(self, boxes, masks, scores, iou_threshold=0.5, conf_thresh=0.05):
+    def traditional_nms(self, boxes, masks, scores, iou_threshold=0.5, conf_thresh=0.05):
         import pyximport
         pyximport.install(setup_args={"include_dirs":np.get_include()}, reload_support=True)
 
         from utils.cython_nms import nms as cnms
+        from utils.cython_nms import soft_nms as snms
 
         num_classes = scores.size(0)
 
@@ -545,7 +208,13 @@ class Detect(object):
                 continue
             
             preds = torch.cat([boxes[conf_mask], cls_scores[:, None]], dim=1).cpu().numpy()
-            keep = cnms(preds, iou_threshold)
+            # nms
+            # keep = cnms(preds, iou_threshold)
+
+            # soft-nms
+            # print('using soft nms')
+            _, keep = snms(preds, sigma=0.5, Nt=iou_threshold, threshold=0.35, method=1)
+            # _, keep = snms(preds, sigma=0.5, Nt=iou_threshold, threshold=0.35, method=2)
             keep = torch.Tensor(keep, device=boxes.device).long()
 
             idx_lst.append(idx[keep])
@@ -565,50 +234,3 @@ class Detect(object):
 
         # Undo the multiplication above
         return boxes[idx] / cfg.max_size, masks[idx], classes, scores
-
-    def traditional_nms_ours(self, boxes, masks, scores, iou_threshold=0.5, conf_thresh=0.05):
-        import pyximport
-        pyximport.install(setup_args={"include_dirs":np.get_include()}, reload_support=True)
-
-        from utils.cython_nms import nms as cnms
-
-        num_classes = scores.size(0)
-
-        idx_lst = []
-        cls_lst = []
-        scr_lst = []
-        box_lst = []
-        mask_lst = []
-        # Multiplying by max_size is necessary because of how cnms computes its area and intersections
-        boxes = boxes * cfg.max_size
-        for _cls in range(num_classes):
-            cls_scores = scores[_cls, :]
-            _, id = cls_scores.sort(0, descending=True)
-            id = id[:200].contiguous()
-            cls_scores = cls_scores[id]
-
-            idx = torch.arange(cls_scores.size(0), device=boxes.device)
-
-            if cls_scores.size(0) == 0:
-                continue
-            preds = torch.cat([boxes[id], cls_scores[:, None]], dim=1).cpu().numpy()
-            keep = cnms(preds, iou_threshold)
-            keep = torch.Tensor(keep, device=boxes.device).long()
-            m = (cls_scores[keep] > 0.01)
-            idx_lst.append(idx[keep][m])
-            cls_lst.append(keep[m] * 0 + _cls)
-            scr_lst.append(cls_scores[keep][m])
-            box_lst.append(boxes[id][keep][m])
-            mask_lst.append(masks[id][keep][m])
-        idx     = torch.cat(idx_lst, dim=0)
-        classes = torch.cat(cls_lst, dim=0)
-        scores  = torch.cat(scr_lst, dim=0)
-        boxes  = torch.cat(box_lst, dim=0)
-        masks  = torch.cat(mask_lst, dim=0)
-
-        scores, idx2 = scores.sort(0, descending=True)
-        idx2 = idx2[:cfg.max_num_detections]
-        scores = scores[:cfg.max_num_detections]
-        classes = classes[idx2]
-        # Undo the multiplication above
-        return boxes[idx2] / cfg.max_size, masks[idx2], classes, scores
